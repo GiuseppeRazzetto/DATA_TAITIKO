@@ -1,14 +1,20 @@
-import requests
+import os
+import json
 import gspread
-import time
-from oauth2client.service_account import ServiceAccountCredentials
-from datetime import datetime
+from google.oauth2 import service_account
 
-# Google Sheets setup
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("json_ttg.json", scope)
+# Cargar el JSON desde la variable de entorno
+creds_json = os.environ.get("GOOGLE_CREDS_JSON")
+creds_dict = json.loads(creds_json)
+
+# Crear las credenciales a partir del diccionario
+creds = service_account.Credentials.from_service_account_info(
+    creds_dict,
+    scopes=["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
+)
+
 client = gspread.authorize(creds)
-sheet = client.open("PRECIO_TTG").sheet1  # Cambia si usas otro nombre de hoja
+sheet = client.open("PRECIO_TTG").sheet1
 
 headers = [
     "timestamp", "price_usd", "price_native",
