@@ -1,13 +1,17 @@
 import requests
-import csv
-import os
+import gspread
 import time
+from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 
-filename = "ttg_historical_data.csv"
+# Google Sheets setup
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+creds = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+client = gspread.authorize(creds)
+sheet = client.open("PRECIO_TTG").sheet1  # Cambia si usas otro nombre de hoja
 
 headers = [
-    "timestamp", "price_usd", "price_native", 
+    "timestamp", "price_usd", "price_native",
     "volume_h24", "volume_h6", "volume_h1", "volume_m5",
     "buys_h24", "sells_h24", "buys_h6", "sells_h6",
     "price_change_h1", "price_change_h6", "price_change_h24",
@@ -43,22 +47,16 @@ def fetch_ttg_data():
         "market_cap": float(data["marketCap"]),
     }
 
-def save_data_to_csv(data, filename):
-    file_exists = os.path.isfile(filename)
-    with open(filename, mode="a", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=headers)
-        if not file_exists:
-            writer.writeheader()
-        writer.writerow(data)
-
-# Bucle infinito para guardar cada minuto
-print("⏳ Iniciando recolección de datos cada minuto...")
+# Bucle 24/7 con intervalo de 30 segundos
+print("⏳ Iniciando monitoreo continuo...")
 while True:
     try:
         data = fetch_ttg_data()
-        save_data_to_csv(data, filename)
-        print(f"✅ Datos guardados: {data['timestamp']}")
-        time.sleep(45)  # Esperar 60 segundos
+        row = [data[h] for h in headers]
+        sheet.append_row(row)
+        print(f"✅ Guardado: {data['timestamp']}")
+        time.sleep(30)
     except Exception as e:
         print(f"⚠️ Error: {e}")
-        time.sleep(10)  # Esperar menos si falla, para reintentar rápido
+        time.sleep(10)
+
