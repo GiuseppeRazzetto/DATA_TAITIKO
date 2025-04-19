@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hamster-y-otros-bots",
+  "private_key_id": "f444b1b72a82d68fcddbcafba8f355d65b2e29a4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCkI41C03Hep0WW\nrXJ58sR/DuLfPm+ZU/XQUXNTk6szFTgzKDHeOuSA+Hy75tNEQQ2UiiXQZJih3LXk\nAvBNbcgeqC+z6G0HRatM8jGTrrN7GWPCfUy0aA/BqyRSn2exup1TNeGGwj7dp32s\nlOxhTfBBWNgoAHMzVE5vnfpJCoQm60Yp0S1dEeRMGmEmZyRE0F7qodxVgugvlM8L\naAbTJr/tLAz2thi636hXnP+PVR1HFn3C/Tsjpj94KwSYQYXPp9lZKWITHW0b+IYt\n5Gls/Irl3MC6GQGjLCX43DwjbyPl7Zi5fXjuLhNhlhtW5vzZaO4sYE/birnAZW4q\nCBURdiM/AgMBAAECgf8vO2EVhG2VTze3JDIiOrml1k1ymtos76bMoKOPE+8vw+to\nIn43H2X3DDTYh+juEHTX9D5CuVqH4/sd9w/Z4r1eFQelEueiMBTFukE0k2ZnsJFZ\nu19XNUVTdZao2otRmWGsOtUAR4/Pjg2b8T6+wVlhdIS+/gzTDcTZrvFWvgVJLUla\nxPB9LfoMASgN9aEPpcdrk2wB3kgLNXktDrFwyy7xSwZ3RM4OdwkTIcCFJIv9Q37E\nWztx+kWw4ws8bB2VfM61yWWfZSZYLTJo/cYLhbZ/cPh8MSgRxzaWtRgQ6VvJnSXE\nSdq+XE7UOpxwC4Jj2niHxbWgfSyUNgF5dytWFqECgYEA5ErcT1DlsfV6g3Ab/k+V\nRmjiRBOIlokCbGEGzqHYGa12Cy6v7AFYTMW9I7WbbmVOTsFG6ialJdtYzPbbcx/0\naLwdGX2myEB0xSX7tq2Jnl8G5bVUgzpp1N7M0YMp3hx6k9A4VcPLQhiXac5yr92Q\ndZBVV2jFWiOKzPzz/orp4g8CgYEAuA9p/+aw8v/Pz5s/gWXKIYnIQIL/G4NGc9yp\nfkfw+EBfPbIm047jtTSfl47L/AiqsvRT24YfCowNDqkLqBgs3fjPrRkU+SpO54j+\nEZurXfoi/y8P3/ZOp9zxPjyhoAbwWU7ZkRlr58su+VooCElasTHJRKv/+8G99IN6\nGrCDG9ECgYEAsSU9yvY1JmAbjv5hWncamCYu3TBjHpx2Gu83PwPrEhG9tXOm4vUw\nNXKDD8COOZ22o/nqMyuFntiUEYfERZMYLmU6F1ufHWiWs5yDs/74+ME4MusAB0w+\nbwXr3O9wf3+NxkEeVb62bDV02I9wAvNkczVqY4dTDFzkCaiHFI9qaRUCgYA5z12T\nqnlZWU+D/Vbs5XOfJQ9oc7x8f7bZHS1/JEljL5S6ZAId4HtUprqZd5hKCM7UdjkA\nche90E8pk569pRoyfbt8uqwDtm4h+r0R+rrQQYhMbhOmXE5IGvUKfzCkeolzA3kC\nQeHKY97VIqQANknt7Z0xnHRCNo/bBJCNYXNMgQKBgQCL8Bl4shE8vCD6h+tWWuGA\nSGyv1TIAow9KzcYR2+r0YJmfzWQQI2i5j0rA1uJQSSm7yf60wZAL4LgYP13KR3Gr\nhlxEp1jVhhTPdgKeBkNyk/ghcxk5pqOjfImFreIY+X/h9cS9O5SsWul9/1NHPmg6\nyGiRfgmgeieZOS9oy5muqw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "giusepperttg@hamster-y-otros-bots.iam.gserviceaccount.com",
+  "client_id": "107772747904333303282",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/giusepperttg%40hamster-y-otros-bots.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
